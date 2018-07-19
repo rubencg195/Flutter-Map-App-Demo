@@ -1,0 +1,28 @@
+1.1. Add the following permissions in Android/app/src/AndroidManifest.xml
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+1.2. Add the meta data to the application section inside the manifest, before the activity.
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="your_api_key"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+
+1.3. Add an activity below the MainActivity in the manifest
+    <activity android:name="com.apptreesoftware.mapview.MapActivity" android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+
+1.4. Add the kotlin dependencies in the android/build.gradle  dependencies area
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.1.2-4'
+
+1.5.Add the lines in the following place ios/Runner/Info.plist
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Using location to display on a map</string>
+
+2. Add map_view: to the pubspec.yaml dependencies area.
+
+3.1. Go to: https://console.developers.google.com/
+3.2. Enable Google Static Maps API
+3.3. Once enabled, you can use the same API key you generated for iOS/Android.
+3.4. Replace "your_api_key" in the manifest file with the correct key.
+
+continue watching:
+https://youtu.be/2PVHzuuN9Ww?t=1512
+
